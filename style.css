@@ -1,0 +1,190 @@
+/* Using Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Resetting styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styling the page */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Styling the navigation bar */
+nav {
+    width: 100%;
+    height: 10vh;
+}
+
+/* Styling the container */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling the logo */
+.container .logo img {
+    margin-left: 50px;
+    width: 100px;
+    /* Adding a drop shadow effect */
+    filter: drop-shadow(2px 2px 2px white);
+}
+
+/* Styling the links */
+.container .links a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px;
+    /* Adding smooth transition effect */
+    transition: 0.3s linear;
+}
+
+/* Creating a hover effect for the links */
+.links a:hover::before,
+.links a:hover {
+    color: #333333;
+    width: 100%;
+}
+
+/* Styling the search icon */
+.container .search i {
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-right: 50px;
+}
+
+/* Styling the main section */
+section {
+    width: 100%;
+    height: 90vh;
+}
+
+/* Styling the content */
+section .content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Styling the main content */
+.content .main-content {
+    color: white;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Styling the headings */
+.main-content h1 {
+    /* Responsive font size */
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+}
+
+.main-content h2 {
+    color: #acacac;
+    /* Responsive font size */
+    font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+}
+
+/* Styling the paragraphs */
+.main-content p {
+    margin-top: 10px;
+    color: #b6b6b6;
+}
+
+/* Styling the order section */
+.main-content .order {
+    display: flex;
+    margin: 20px 10px;
+    width: 100%;
+    justify-content: space-around;
+    min-height: 7vh;
+}
+
+/* Styling the order headings */
+.order h3 {
+    font-size: 1.8rem;
+}
+
+/* Styling the order buttons */
+.order button {
+    min-width: 50%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    /* Gradient background */
+    background: linear-gradient(to bottom right, #333333 40%, #ffffff);
+    color: white;
+    font-weight: 700;
+    padding: 0 2px;
+    /* Responsive font size */
+    font-size: clamp(0.6rem, 1rem 5vw, 3rem);
+    transition: 0.1s linear;
+}
+
+/* Adding a hover effect for the order buttons */
+.order button:hover {
+    box-shadow: 0 0 30px #333333;
+    /* Changing background gradient */
+    background: linear-gradient(to bottom right, #ffffff, #333333 40%);
+}
+
+/* Styling the image */
+.content .image img {
+    max-width: 450px;
+    width: 100%;
+    margin-right: 100px;
+    /* Adding a rotation and shadow effect */
+    transform: rotate(40deg) translateX(900px);
+    filter: drop-shadow(-10px -10px 200px #ececec);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) {
+    .content {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .main-content {
+        margin: 0 10px;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 884px) {
+    .content .image img {
+        min-width: 500px;
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 440px) {
+    /* Hiding the links for small screens */
+    .links {
+        display: none;
+    }
+
+    /* Adjusting image size for small screens */
+    .content .image img {
+        width: 100%;
+        margin-right: none;
+    }
+}
